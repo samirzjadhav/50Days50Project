@@ -7,7 +7,6 @@
 body {
   font-family: "Muli", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -21,15 +20,17 @@ body {
 }
 
 .panel {
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 50px;
   color: #fff;
   cursor: pointer;
-  position: relative;
   flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
 }
 
 .panel h3 {
@@ -47,12 +48,14 @@ body {
 
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
   .container {
-    width: 100vh;
+    width: 100vw;
   }
+
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
