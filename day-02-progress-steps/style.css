@@ -56,7 +56,6 @@ body {
   z-index: -1;
   transition: 0.4s ease;
 }
-<<<<<<< HEAD
 
 .circle {
   background-color: #fff;
@@ -99,5 +98,3 @@ btn:focus {
   background-color: #e0e0e0;
   cursor: not-allowed;
 }
-=======
->>>>>>> f4d4a70 (feat: styled progress-container)
