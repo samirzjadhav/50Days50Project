@@ -23,13 +23,6 @@ body {
   margin: 0;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #333;
-}
-
 h1 {
   font-size: 4rem;
   color: #fff;
@@ -49,11 +42,11 @@ h1 {
   top: 40%;
   transform: translateX(-50%);
   text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #fff;
-  border: #fff solid 0.2rem;
   width: 15rem;
   padding: 1.5rem;
 }
@@ -68,6 +61,13 @@ h1 {
   border-color: var(--right-btn-hover-color);
 }
 
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
 .split {
   position: absolute;
   width: 50%;
@@ -77,7 +77,7 @@ h1 {
 
 .split.left {
   left: 0;
-  background: url(./ps.jpg);
+  background: url("./ps.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -92,7 +92,7 @@ h1 {
 
 .split.right {
   right: 0;
-  background: url(./xbox.jpg);
+  background: url("./xbox.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -105,6 +105,13 @@ h1 {
   background-color: var(--right-bg-color);
 }
 
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
 .hover-left .left {
   width: var(--hover-width);
 }
@@ -113,10 +120,22 @@ h1 {
   width: var(--other-width);
 }
 
-.hover-left .right {
+.hover-right .right {
   width: var(--hover-width);
 }
 
-.hover-left .left {
+.hover-right .left {
   width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
 }
